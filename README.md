@@ -1,6 +1,11 @@
-# Project Title
+# Chat
 
-One Paragraph of project description goes here
+Write a program that enables two users to chat. Implement one user
+as the server (Figure 31.21a) and the other as the client (Figure 31.21b). The
+server has two text areas: one for entering text and the other (noneditable) for
+displaying text received from the client. When the user presses the Enter key,
+the current line is sent to the client. The client has two text areas: one (noneditable) for displaying text from the server and the other for entering text. When
+the user presses the Enter key, the current line is sent to the server.
 
 ## Example Output
 
@@ -10,8 +15,10 @@ This image will display as your example output. Name the image README.jpg in you
 
 ## Analysis Steps
 
-This section should restate the assignment and explain how you analyzed the requirements in order 
-to develop a solution.
+Well I analyzed the requirements of the program by looking at the pearson text web files, I first looked at the program
+description was to create a client side and a servide chat box, on each side of a Interface so that one side, either
+the client or the server can type text and when you press enter the text is sent to the other chat box, making it so either
+the client or server receive a message.
 
 ### Design
 
