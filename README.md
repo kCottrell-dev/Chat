@@ -18,7 +18,8 @@ This image will display as your example output. Name the image README.jpg in you
 Well I analyzed the requirements of the program by looking at the pearson text web files, I first looked at the program
 description was to create a client side and a servide chat box, on each side of a Interface so that one side, either
 the client or the server can type text and when you press enter the text is sent to the other chat box, making it so either
-the client or server receive a message.
+the client or server receive a message. All of the info I needed to create these boxes was in the chapter 31 section, as well as
+referring to my knowledge of past programs.
 
 ### Design
 
@@ -48,7 +49,7 @@ End with an example of getting some data out of the system or using it for a lit
 
 ## Notes
 
-Explain any issues or testing instructions.
+No notes, simply run the program to test it out by entering text and pressing enter.
 
 ## Do not change content below this line
 ## Adapted from a README Built With
