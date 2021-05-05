@@ -116,7 +116,7 @@ You can use this data to get an idea of how to make a chat log between a server 
 
 ## Notes
 
-Wasn't able to figure out how to display the text into the other textarea. Instructions simply run the program to test it out by entering text and pressing enter which will display in the console.
+Wasn't able to complete this program of all it's requirements. Instructions simply run the program to test it out by entering text and pressing enter which will display in the console.
 
 ## Do not change content below this line
 ## Adapted from a README Built With
