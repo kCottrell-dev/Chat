@@ -18,38 +18,107 @@ This image will display as your example output. Name the image README.jpg in you
 Well I analyzed the requirements of the program by looking at the pearson text web files, I first looked at the program
 description was to create a client side and a servide chat box, on each side of a Interface so that one side, either
 the client or the server can type text and when you press enter the text is sent to the other chat box, making it so either
-the client or server receive a message. All of the info I needed to create these boxes was in the chapter 31 section, as well as
-referring to my knowledge of past programs.
+the client or server receive a message.
 
 ### Design
 
-How did you approach your program design? Did you use multiple classes to define various objects?
-
+Used One class to define everything including the server and client sides
 ```
-Give examples
+ public Server() {
+  setLayout(new GridLayout(2, 1, 5, 5));
+  area1.setWrapStyleWord(true);
+  area1.setWrapStyleWord(true);
+     area2.setLineWrap(true);     
+     area2.setLineWrap(true);
+     area2.setEditable(false);
+     JScrollPane SP1 = new JScrollPane(area1);
+     JScrollPane SP2 = new JScrollPane(area2);
+     SP1.setBorder(new TitledBorder("Client"));
+     SP2.setBorder(new TitledBorder("Server"));
+     add(SP1);
+     add(SP2);
+  setTitle("Server");
+  setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+  setSize(500, 500);
+  setLocationRelativeTo(null);
+  setVisible(true);
+  
 ```
 
 ### Testing
 
-A step by step series of examples that you developed to properly test the program. 
 
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
+Step 1: Define Text Areas
 
 ```
-until finished
+private JTextArea area1 = new JTextArea();
+ private JTextArea area2 = new JTextArea();
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+Step 2: Create Interface 
+
+```
+  setLayout(new GridLayout(2, 1, 5, 5));
+  area1.setWrapStyleWord(true);
+  area1.setWrapStyleWord(true);
+     area2.setLineWrap(true);     
+     area2.setLineWrap(true);
+     area2.setEditable(false);
+     JScrollPane SP1 = new JScrollPane(area1);
+     JScrollPane SP2 = new JScrollPane(area2);
+     SP1.setBorder(new TitledBorder("Client"));
+     SP2.setBorder(new TitledBorder("Server"));
+     add(SP1);
+     add(SP2);
+  setTitle("Server");
+  setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+  setSize(500, 500);
+  setLocationRelativeTo(null);
+  setVisible(true);
+  
+```
+
+Step 3: Create KeyEvent and create Socket
+
+```
+ aarea1.addKeyListener(new KeyAdapter() {
+   @Override
+   public void keyPressed(KeyEvent e) {
+         if(e.getKeyCode() == KeyEvent.VK_ENTER) {
+             
+             System.out.println(area1.getText());
+         }
+          
+   }
+  });
+  
+  try {
+   @SuppressWarnings("resource")
+   ServerSocket serverSocket = new ServerSocket(8000);
+   Socket socket = serverSocket.accept();
+  } catch (IOException e) {
+   e.printStackTrace();
+  }
+ }
+ 
+```
+Step 4: Run the Server/Client
+```
+ public static void main(String[] args) {
+  new Server();
+ }
+}
+```
+
+```
+Incomplete
+```
+
+You can use this data to get an idea of how to make a chat log between a server and client.
 
 ## Notes
 
-No notes, simply run the program to test it out by entering text and pressing enter.
+Wasn't able to figure out how to display the text into the other textarea. Instructions simply run the program to test it out by entering text and pressing enter which will display in the console.
 
 ## Do not change content below this line
 ## Adapted from a README Built With
