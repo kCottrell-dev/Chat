@@ -51,11 +51,6 @@ Step 2: Create Interface
 
 ```
   setLayout(new GridLayout(2, 1, 5, 5));
-  area1.setWrapStyleWord(true);
-  area1.setWrapStyleWord(true);
-     area2.setLineWrap(true);     
-     area2.setLineWrap(true);
-     area2.setEditable(false);
      JScrollPane SP1 = new JScrollPane(area1);
      JScrollPane SP2 = new JScrollPane(area2);
      SP1.setBorder(new TitledBorder("Client"));
@@ -65,7 +60,6 @@ Step 2: Create Interface
   setTitle("Server");
   setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
   setSize(500, 500);
-  setLocationRelativeTo(null);
   setVisible(true);
   
 ```
